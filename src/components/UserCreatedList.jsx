@@ -6,11 +6,14 @@ import PersonCard from './PersonCard';
 const UserCreatedList = ({ people, peopleList, userList, setUserList }) => {
   return (
     <ListWrapper>
-      <Header text="Please click a person to remove them from your list" list />
+      <Header
+        text="Please click a person to remove them from your list"
+        list="true"
+      />
       {userList.length > 0 &&
         userList.map((user, i) => {
           console.log('user in map', user);
-          return <PersonCard key={i} person={user} userList />;
+          return <PersonCard key={i} person={user} userList="true" />;
         })}
     </ListWrapper>
   );

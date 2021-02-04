@@ -9,6 +9,7 @@ import {
 } from '../styles/PersonCard';
 
 const PersonCard = ({ person, userList }) => {
+  console.log('person in card', person);
   return (
     <CardWrapper>
       <Avatar
@@ -19,7 +20,7 @@ const PersonCard = ({ person, userList }) => {
         <Name>{person.name}</Name>
         <Email>{person.email}</Email>
       </Content>
-      <Button>
+      <Button userList={userList}>
         <svg
           width="20px"
           height="20px"
@@ -29,9 +30,9 @@ const PersonCard = ({ person, userList }) => {
           stroke="currentColor"
         >
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="4"
             d="M9 5l7 7-7 7"
           />
         </svg>

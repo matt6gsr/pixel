@@ -24,16 +24,18 @@ const DataList = ({ people, setPeople, userList, setUserList }) => {
   console.log('userList', userList);
 
   return (
-    <ListWrapper data>
+    <ListWrapper data="true">
       {loading === 'loading' && <Spinner text="Loading People..." />}
       {loading === 'complete' && people.length === 0 && (
         <Header text="Sorry, there's nobody here!" list />
       )}
       {loading === 'complete' && people.length !== 0 && (
         <>
-          <Header text="Please click a person to add them to your list" list />
+          <Header
+            text="Please click a person to add them to your list"
+            list="true"
+          />
           {people.map((person, i) => {
-            console.log('person in map', person);
             return <PersonCard key={i} person={person} />;
           })}
         </>
