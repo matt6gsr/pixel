@@ -4,7 +4,7 @@ import { Header } from './Header';
 const UserCreatedList = () => {
   return (
     <ListWrapper>
-      <Header text="Please click a person to remove them from your list" />
+      <Header text="Please click a person to remove them from your list" list />
     </ListWrapper>
   );
 };
