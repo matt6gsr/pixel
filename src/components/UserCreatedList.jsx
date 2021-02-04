@@ -21,7 +21,7 @@ const UserCreatedList = ({ people, setPeople, userList, setUserList }) => {
             <PersonCard
               key={i}
               person={user}
-              userList="true"
+              createdList="true"
               handleClick={handleRemovePerson}
             />
           );

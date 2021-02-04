@@ -8,9 +8,9 @@ import {
   Button,
 } from '../styles/PersonCard';
 
-const PersonCard = ({ person, userList, handleClick }) => {
+const PersonCard = ({ person, createdList, handleClick }) => {
   return (
-    <CardWrapper>
+    <CardWrapper createdList={createdList}>
       <Avatar
         src={'https://i.pravatar.cc/150?u=' + person.email}
         alt={person.name}
@@ -19,7 +19,7 @@ const PersonCard = ({ person, userList, handleClick }) => {
         <Name>{person.name}</Name>
         <Email>{person.email}</Email>
       </Content>
-      <Button userList={userList} onClick={() => handleClick(person)}>
+      <Button createdList={createdList} onClick={() => handleClick(person)}>
         <svg
           width="20px"
           height="20px"
