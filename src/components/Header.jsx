@@ -1,10 +1,10 @@
 import React from 'react';
 import { HeaderWrapper, HeaderText } from '../styles/Header';
 
-export const Header = () => {
+export const Header = ({ text }) => {
   return (
     <HeaderWrapper>
-      <HeaderText>Create Your List Of People</HeaderText>
+      <HeaderText>{text}</HeaderText>
     </HeaderWrapper>
   );
 };
