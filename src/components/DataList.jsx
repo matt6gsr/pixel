@@ -29,16 +29,13 @@ const DataList = ({ people, setPeople, userList, setUserList }) => {
 
   return (
     <ListWrapper data="true">
-      {loading === 'loading' && <Spinner text="Loading People..." />}
+      {loading === 'loading' && <Spinner text="Loading Contacts..." />}
       {loading === 'complete' && people.length === 0 && (
         <Header text="Sorry, there's nobody here!" list="true" />
       )}
       {loading === 'complete' && people.length !== 0 && (
         <>
-          <Header
-            text="Please click a person to add them to your list"
-            list="true"
-          />
+          <Header text="Click a contact to add them to your list" list="true" />
           {people.map((person, i) => {
             return (
               <PersonCard

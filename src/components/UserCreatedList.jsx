@@ -12,8 +12,10 @@ const UserCreatedList = ({ people, setPeople, userList, setUserList }) => {
   return (
     <ListWrapper>
       <Header
-        text="Please click a person to remove them from your list"
+        text="Click a contact to remove them from this list"
         list="true"
+        userList={userList}
+        setUserList={setUserList}
       />
       {userList.length > 0 &&
         userList.map((user, i) => {
@@ -26,6 +28,7 @@ const UserCreatedList = ({ people, setPeople, userList, setUserList }) => {
             />
           );
         })}
+      {!userList.length && <Header text="Your contact list is empty" />}
     </ListWrapper>
   );
 };

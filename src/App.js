@@ -10,7 +10,7 @@ function App() {
 
   return (
     <AppWrapper>
-      <Header text="Create Your List Of People" />
+      <Header text="Create Your List Of Contacts" />
       <ContentWrapper>
         <DataList
           people={people}
