@@ -8,5 +8,5 @@ export const HeaderWrapper = styled.div`
   display: flex;
   justify-content: center;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
 `;
