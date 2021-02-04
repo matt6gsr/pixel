@@ -8,7 +8,7 @@ import {
   Button,
 } from '../styles/PersonCard';
 
-const PersonCard = ({ person }) => {
+const PersonCard = ({ person, userList }) => {
   return (
     <CardWrapper>
       <Avatar

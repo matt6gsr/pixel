@@ -10,7 +10,7 @@ const UserCreatedList = ({ people, peopleList, userList, setUserList }) => {
       {userList.length > 0 &&
         userList.map((user, i) => {
           console.log('user in map', user);
-          return <PersonCard key={i} person={user} />;
+          return <PersonCard key={i} person={user} userList />;
         })}
     </ListWrapper>
   );
