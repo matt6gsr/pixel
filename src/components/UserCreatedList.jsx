@@ -6,7 +6,7 @@ import PersonCard from './PersonCard';
 const UserCreatedList = ({ people, setPeople, userList, setUserList }) => {
   const handleRemovePerson = (person) => {
     setPeople((people) => [...people, person]);
-    setUserList((userList = userList.filter((u) => u !== person)));
+    setUserList((userList = userList.filter((user) => user !== person)));
   };
 
   return (
