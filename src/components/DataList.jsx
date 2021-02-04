@@ -3,10 +3,10 @@ import axios from 'axios';
 import { ListWrapper } from '../styles/commom';
 import { Header } from './Header';
 import Spinner from './Spinner';
+import PersonCard from './PersonCard';
 
-const DataList = () => {
+const DataList = ({ people, setPeople, data }) => {
   const [loading, setLoading] = useState('initial');
-  const [people, setPeople] = useState([]);
 
   useEffect(() => {
     const fetchPeople = async () => {
@@ -17,19 +17,28 @@ const DataList = () => {
       setLoading('complete');
     };
     fetchPeople();
-  }, []);
+  }, [setPeople]);
 
   console.log('people', people);
   console.log('loading', loading);
 
   return (
-    <ListWrapper>
+    <ListWrapper data>
       {loading === 'loading' && <Spinner text="Loading People..." />}
       {loading === 'complete' && people.length === 0 && (
-        <Header text="Sorry, there was a problem rounding the people up!" />
+        <Header
+          text="Sorry, there was a problem rounding the people up!"
+          list
+        />
       )}
       {loading === 'complete' && people.length !== 0 && (
-        <Header text="Please click a person to add them to your list" />
+        <>
+          <Header text="Please click a person to add them to your list" list />
+          {people.map((person, i) => {
+            console.log('person in map', person);
+            return <PersonCard key={i} person={person} />;
+          })}
+        </>
       )}
     </ListWrapper>
   );
