@@ -6,13 +6,19 @@ import UserCreatedList from './components/UserCreatedList';
 
 function App() {
   const [people, setPeople] = useState([]);
+  const [userList, setUserList] = useState([]);
 
   return (
     <AppWrapper>
       <Header text="Create Your List Of People" />
       <ContentWrapper>
-        <DataList people={people} setPeople={setPeople} />
-        <UserCreatedList />
+        <DataList
+          people={people}
+          setPeople={setPeople}
+          userList={userList}
+          setUserList={setUserList}
+        />
+        <UserCreatedList userList={userList} setUserList={setUserList} />
       </ContentWrapper>
     </AppWrapper>
   );
