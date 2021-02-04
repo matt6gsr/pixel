@@ -5,7 +5,7 @@ import { Header } from './Header';
 import Spinner from './Spinner';
 import PersonCard from './PersonCard';
 
-const DataList = ({ people, setPeople, data }) => {
+const DataList = ({ people, setPeople, userList, setUserList }) => {
   const [loading, setLoading] = useState('initial');
 
   useEffect(() => {
@@ -21,6 +21,7 @@ const DataList = ({ people, setPeople, data }) => {
 
   console.log('people', people);
   console.log('loading', loading);
+  console.log('userList', userList);
 
   return (
     <ListWrapper data>
