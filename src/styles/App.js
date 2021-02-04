@@ -5,6 +5,7 @@ export const AppWrapper = styled.div`
   padding: 2rem;
   border: 1px solid lightgrey;
   border-radius: 5px;
+  background-color: #ededed;
 `;
 
 export const ContentWrapper = styled.div`
