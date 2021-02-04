@@ -8,3 +8,24 @@ export const ListWrapper = styled.div`
   width: 50%;
   background-color: white;
 `;
+
+export const SortButton = styled.button`
+  border: none;
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(199, 206, 255),
+    rgb(59, 82, 255)
+  );
+  overflow: none;
+  color: #fff;
+  border-radius: 0.5rem;
+  height: 2rem;
+  width: 5rem;
+
+  :focus {
+    outline: 0;
+  }
+  :hover {
+    cursor: pointer;
+  }
+`;
