@@ -18,7 +18,12 @@ function App() {
           userList={userList}
           setUserList={setUserList}
         />
-        <UserCreatedList userList={userList} setUserList={setUserList} />
+        <UserCreatedList
+          people={people}
+          setPeople={setPeople}
+          userList={userList}
+          setUserList={setUserList}
+        />
       </ContentWrapper>
     </AppWrapper>
   );
