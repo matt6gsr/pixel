@@ -3,7 +3,12 @@ import { ListWrapper } from '../styles/commom';
 import { Header } from './Header';
 import PersonCard from './PersonCard';
 
-const UserCreatedList = ({ people, peopleList, userList, setUserList }) => {
+const UserCreatedList = ({ people, setPeople, userList, setUserList }) => {
+  const handleRemovePerson = (person) => {
+    setPeople((people) => [...people, person]);
+    setUserList((userList = userList.filter((u) => u !== person)));
+  };
+
   return (
     <ListWrapper>
       <Header
@@ -12,8 +17,14 @@ const UserCreatedList = ({ people, peopleList, userList, setUserList }) => {
       />
       {userList.length > 0 &&
         userList.map((user, i) => {
-          console.log('user in map', user);
-          return <PersonCard key={i} person={user} userList="true" />;
+          return (
+            <PersonCard
+              key={i}
+              person={user}
+              userList="true"
+              handleClick={handleRemovePerson}
+            />
+          );
         })}
     </ListWrapper>
   );

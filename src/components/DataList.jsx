@@ -20,14 +20,18 @@ const DataList = ({ people, setPeople, userList, setUserList }) => {
   }, [setPeople]);
 
   console.log('people', people);
-  console.log('loading', loading);
   console.log('userList', userList);
+
+  const handleAddPerson = (person) => {
+    setUserList((userList) => [...userList, person]);
+    setPeople((people = people.filter((p) => p !== person)));
+  };
 
   return (
     <ListWrapper data="true">
       {loading === 'loading' && <Spinner text="Loading People..." />}
       {loading === 'complete' && people.length === 0 && (
-        <Header text="Sorry, there's nobody here!" list />
+        <Header text="Sorry, there's nobody here!" list="true" />
       )}
       {loading === 'complete' && people.length !== 0 && (
         <>
@@ -36,7 +40,13 @@ const DataList = ({ people, setPeople, userList, setUserList }) => {
             list="true"
           />
           {people.map((person, i) => {
-            return <PersonCard key={i} person={person} />;
+            return (
+              <PersonCard
+                key={i}
+                person={person}
+                handleClick={handleAddPerson}
+              />
+            );
           })}
         </>
       )}
