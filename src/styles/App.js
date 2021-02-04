@@ -6,6 +6,7 @@ export const AppWrapper = styled.div`
   border: 1px solid lightgrey;
   border-radius: 5px;
   background-color: #ededed;
+  font-family: 'Roboto', sans-serif;
 `;
 
 export const ContentWrapper = styled.div`
