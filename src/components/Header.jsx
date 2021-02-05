@@ -1,6 +1,5 @@
 import React from 'react';
-import { HeaderWrapper, HeaderText } from '../styles/Header';
-import { SortButton } from '../styles/commom';
+import { HeaderWrapper, HeaderText, SortButton } from '../styles/Header';
 
 const Header = ({
   text,
@@ -9,7 +8,6 @@ const Header = ({
   setUserList,
   setSortOrderAsc,
   sortOrderAsc,
-  sortButtonHeader,
 }) => {
   return (
     <HeaderWrapper list={list}>
