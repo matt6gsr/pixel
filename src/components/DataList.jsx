@@ -28,7 +28,7 @@ const DataList = ({ people, setPeople, userList, setUserList }) => {
     <ListWrapper data="true">
       {loading === 'loading' && <Spinner text="Loading Contacts..." />}
       {loading === 'complete' && people.length === 0 && (
-        <Header text="Sorry, there's nobody here!" list="true" />
+        <Header text="Sorry, there's nobody here!" />
       )}
       {loading === 'complete' && people.length !== 0 && (
         <>
