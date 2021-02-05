@@ -15,7 +15,7 @@ const UserCreatedList = ({
     setPeople((people) => [...people, person]);
     setUserList((userList = userList.filter((user) => user !== person)));
   };
-  console.log('USERLIST IN CREATEDLISTTTTTTTTTTT', userList);
+
   return (
     <ListWrapper>
       <Header
