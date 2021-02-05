@@ -9,10 +9,11 @@ const Header = ({
   setUserList,
   setSortOrderAsc,
   sortOrderAsc,
+  sortButtonHeader,
 }) => {
   return (
-    <HeaderWrapper>
-      <HeaderText list={list}>{text}</HeaderText>
+    <HeaderWrapper list={list}>
+      <HeaderText>{text}</HeaderText>
       {userList && userList.length > 1 && (
         <SortButton
           onClick={() => {
