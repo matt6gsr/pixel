@@ -1,14 +1,21 @@
 import React from 'react';
 import { ListWrapper } from '../styles/commom';
-import { Header } from './Header';
+import Header from './Header';
 import PersonCard from './PersonCard';
 
-const UserCreatedList = ({ people, setPeople, userList, setUserList }) => {
+const UserCreatedList = ({
+  people,
+  setPeople,
+  userList,
+  setUserList,
+  sortOrderAsc,
+  setSortOrderAsc,
+}) => {
   const handleRemovePerson = (person) => {
     setPeople((people) => [...people, person]);
     setUserList((userList = userList.filter((user) => user !== person)));
   };
-
+  console.log('USERLIST IN CREATEDLISTTTTTTTTTTT', userList);
   return (
     <ListWrapper>
       <Header
@@ -16,6 +23,8 @@ const UserCreatedList = ({ people, setPeople, userList, setUserList }) => {
         list="true"
         userList={userList}
         setUserList={setUserList}
+        setSortOrderAsc={setSortOrderAsc}
+        sortOrderAsc={sortOrderAsc}
       />
       {userList.length > 0 &&
         userList.map((user, i) => {
