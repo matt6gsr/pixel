@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ListWrapper } from '../styles/commom';
-import { Header } from './Header';
+import Header from './Header';
 import Spinner from './Spinner';
 import PersonCard from './PersonCard';
 
