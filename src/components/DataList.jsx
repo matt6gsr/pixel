@@ -19,9 +19,6 @@ const DataList = ({ people, setPeople, userList, setUserList }) => {
     fetchPeople();
   }, [setPeople]);
 
-  console.log('people', people);
-  console.log('userList', userList);
-
   const handleAddPerson = (person) => {
     setUserList((userList) => [...userList, person]);
     setPeople((people = people.filter((p) => p !== person)));
