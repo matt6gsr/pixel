@@ -5,7 +5,7 @@ import Header from './Header';
 import Spinner from './Spinner';
 import PersonCard from './PersonCard';
 
-const DataList = ({ people, setPeople, userList, setUserList }) => {
+const DataList = ({ people, setPeople, setUserList }) => {
   const [loading, setLoading] = useState('initial');
 
   useEffect(() => {
