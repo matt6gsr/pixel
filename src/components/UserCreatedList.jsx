@@ -4,7 +4,6 @@ import Header from './Header';
 import PersonCard from './PersonCard';
 
 const UserCreatedList = ({
-  people,
   setPeople,
   userList,
   setUserList,
