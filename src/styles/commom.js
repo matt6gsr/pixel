@@ -19,8 +19,10 @@ export const SortButton = styled.button`
   overflow: none;
   color: #fff;
   border-radius: 0.5rem;
-  height: 2rem;
-  width: 5rem;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: 1.6rem;
+  right: 1rem;
 
   :focus {
     outline: 0;
