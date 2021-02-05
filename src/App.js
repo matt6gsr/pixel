@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { AppWrapper, ContentWrapper } from './styles/App';
-import { Header } from './components/Header';
+import Header from './components/Header';
 import DataList from './components/DataList';
 import UserCreatedList from './components/UserCreatedList';
 
 function App() {
   const [people, setPeople] = useState([]);
   const [userList, setUserList] = useState([]);
+  const [sortOrderAsc, setSortOrderAsc] = useState(true);
 
   return (
     <AppWrapper>
@@ -23,6 +24,8 @@ function App() {
           setPeople={setPeople}
           userList={userList}
           setUserList={setUserList}
+          sortOrderAsc={sortOrderAsc}
+          setSortOrderAsc={setSortOrderAsc}
         />
       </ContentWrapper>
     </AppWrapper>
